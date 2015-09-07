@@ -1,0 +1,74 @@
+.inputDiv{
+    font-weight:bold
+}
+.inputWhiteDiv{
+    background-color:#E1F6F1;
+}
+.heading{
+    color:#EA5B06;
+}
+.tableDiv{
+    
+    position: absolute;
+    top: 140px;
+
+}
+.inputTable td{
+    border:0px !important;
+    vertical-align: middle !important;
+}
+.seat{
+    font-size:25px;
+}
+.whiteSeat{
+    color: #D0C7C7;
+     text-shadow: black 0px 0px 0px;
+    cursor:pointer;
+}
+.redSeat{
+     color: red; 
+    text-shadow: black 0px 0px 0px;
+}
+.greenSeat{
+   color: green;
+    text-shadow: black 0px 0px 0px;
+    cursor:pointer;
+}
+
+
+#seatsNotAvailable{
+    display:none;
+    font-weight:bold;
+    color:red;
+}
+.seatsInformation{
+     font-size:19px;
+     font-weight:bold;
+}
+.selection{
+    margin-right:10px;
+}
+.screen{
+    background-color:#676CBD;
+    font-weight:bold;
+    font-size:19px;
+}
+.overlayDiv{
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background-color: rgba(0,0,0,0.5);
+
+}
+.whiteBackground{
+    background-color:white;
+}
+.relativeDiv{
+    position:relative;
+}
+.seatNumbers{
+    padding-left:10px !important;
+
+}

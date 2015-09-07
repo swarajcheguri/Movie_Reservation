@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Reservation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://www.webhostinghub.com/glyphs/css/whhg.css">
+
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+
+    <div class="container mainDiv">
+
+        <div class="navbar-fixed-top whiteBackground ">
+            <div class="container whiteBackground">
+                <div class="text-center heading"> <h2>Movie Seat Reservation</h2></div>
+                <div class="inputDiv text-center col-xs-12">
+
+                    <table class="table inputTable">
+                        <tr>
+                            <td class="col-xs-2 text-right">Name:</td>
+                            <td class="col-xs-4"><input class="inputText form-control" type="text" id="name" value="" placeholder="Name" /></td>
+                            <td class="col-xs-3 text-right">No of Seats</td>
+                            <td class="col-xs-3">
+                                <select id="noOfSeats" class="form-control">
+                                    <option value="0">Qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <span id="seatsNotAvailable"> No Seats Available</span>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <div class="container tableDiv">
+            <div class="relativeDiv">
+                <table class="table table-condensed table-responsive seatsTable">
+                    <tbody>
+                        <tr><td colspan="15" class="screen text-center"> Screen</td></tr>
+                        <tr>
+                            <td class=" seatNumbers"> &nbsp;</td>
+                            <td class=" seatNumbers "> 1</td>
+                            <td class=" seatNumbers"> 2</td>
+                            <td class="seatNumbers "> 3</td>
+                            <td class=" seatNumbers"> 4</td>
+                            <td class="seatNumbers "> &nbsp;</td>
+                            <td class=" seatNumbers"> &nbsp;</td>
+                            <td class=" seatNumbers"> 5</td>
+                            <td class=" seatNumbers"> 6</td>
+                            <td class="seatNumbers "> 7</td>
+                            <td class="seatNumbers "> 8</td>
+                            <td class=" seatNumbers"> 9</td>
+                            <td class=" seatNumbers"> 10</td>
+                            <td class=" seatNumbers"> 11</td>
+                            <td class=" seatNumbers"> 12</td>
+                        </tr>
+                        <tr data-row="A">
+                            <td class="seat">
+                                A
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair  icon-chair" data-seatno="A1">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="A2">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="A3">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="A4">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="A5">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="A6">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="A7">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="A8">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="A9">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="A10">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="A11">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="A12">&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="seat">
+                                B
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair  icon-chair" data-seatno="B1">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="B2">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="B3">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="B4">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="B5">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="B6">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="B7">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="B8">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="B9">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="B10">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="B11">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="B12">&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="seat">
+                                C
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair  icon-chair" data-seatno="C1">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="C2">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="C3">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="C4">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="C5">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="C6">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="C7">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="C8">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="C9">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="C10">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="C11">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="C12">&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="seat">
+                                D
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair  icon-chair" data-seatno="D1">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="D2">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="D3">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="D4">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="D5">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="D6">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="D7">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="D8">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="D9">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="D10">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="D11">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="D12">&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="seat">
+                                E
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair  icon-chair" data-seatno="E1">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="E2">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="E3">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="E4">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="E5">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="E6">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="E7">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="E8">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="E9">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="E10">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="E11">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="E12">&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr><td colspan="15" class="text-center"> &nbsp;</td></tr>
+                        <tr>
+                            <td class="seat">
+                                F
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair  icon-chair" data-seatno="F1">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="F2">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="F3">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="F4">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="F5">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="F6">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="F7">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="F8">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="F9">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="F10">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="F11">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="F12">&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="seat">
+                                G
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair  icon-chair" data-seatno="G1">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="G2">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="G3">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="G4">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="G5">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="G6">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="G7">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="G8">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="G9">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="G10">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="G11">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="G12">&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="seat">
+                                H
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair  icon-chair" data-seatno="H1">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="H2">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="H3">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="H4">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="H5">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="H6">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="H7">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="H8">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="H9">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="H10">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="H11">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="H12">&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="seat">
+                                I
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair  icon-chair" data-seatno="I1">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="I2">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="I3">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="I4">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="I5">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="I6">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="I7">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="I8">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="I9">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="I10">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="I11">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="I12">&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="seat">
+                                J
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair  icon-chair" data-seatno="J1">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="J2">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="J3">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="J4">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                &nbsp;
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="J5">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="J6">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="J7">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="J8">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="J9">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="J10">&nbsp;</span>
+                            </td>
+                            <td class="seat ">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="J11">&nbsp;</span>
+                            </td>
+                            <td class="seat">
+                                <span class=" whiteSeat chair icon-chair" data-seatno="J12">&nbsp;</span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body"><input type="button" class="btn confirmSeats" value="Confirm Selection" /></div>
+                    </div>
+                </div>
+                <div class="overlayDiv"></div>
+            </div>
+
+
+            <div class="col-xs-8">
+                <table class="table table-bordered tblSeatsInformation">
+                    <tbody>
+                        <tr><th>Name</th><th>No. of Seats</th><th>Sets</th></tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xs-4">
+                <div class="seatsInformation"><span class=" whiteSeat chair  icon-chair"></span> Empty Seats</div>
+                <div class="seatsInformation"><span class=" greenSeat chair  icon-chair"></span> Selected Seats</div>
+                <div class="seatsInformation"><span class=" redSeat chair  icon-chair"></span> Reserverd Seats</div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
